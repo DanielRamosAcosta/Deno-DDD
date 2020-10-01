@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "ESNext",
-    "strict": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "importsNotUsedAsValues": "preserve",
+      "isolatedModules": false
   }
 }

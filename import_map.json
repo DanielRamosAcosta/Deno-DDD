@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "expect/": "https://raw.githubusercontent.com/allain/expect/v0.2.1/",
+    "alosaur": "https://raw.githubusercontent.com/alosaur/alosaur/master/mod.ts"
+  }
+}
