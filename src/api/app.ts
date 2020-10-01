@@ -20,3 +20,9 @@ app.listen({
   hostname: "0.0.0.0",
   port: 8000,
 });
+
+fetch("http://localhost:8000/customers", { method: "POST" })
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  });
