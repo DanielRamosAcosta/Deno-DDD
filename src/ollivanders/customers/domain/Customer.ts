@@ -1,15 +1,17 @@
+import { Name } from "./Name.ts";
+
 type CustomerPrimitives = ReturnType<Customer["toPrimitives"]>;
 
 export class Customer {
   static fromPrimitives(primitives: CustomerPrimitives) {
-    return new Customer(primitives.length);
+    return new Customer(new Name(primitives.name));
   }
 
-  constructor(private name: string) {}
+  constructor(private name: Name) {}
 
   toPrimitives() {
     return {
-      length: this.name,
+      name: this.name.value,
     };
   }
 }

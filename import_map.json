@@ -1,6 +1,7 @@
 {
   "imports": {
     "expect": "https://deno.land/x/expect@v0.2.5/mod.ts",
-    "alosaur": "https://raw.githubusercontent.com/alosaur/alosaur/master/mod.ts"
+    "computed-types": "https://denoporter.sirjosh.workers.dev/v1/deno.land/x/computed_types/src/index.ts",
+    "alosaur": "https://raw.githubusercontent.com/DanielRamosAcosta/alosaur/master/mod.ts"
   }
 }

@@ -7,7 +7,7 @@ export class WandsGetController {
 
   @Get("/wands")
   async execute() {
-    console.log("Should get all the wands");
+    // TODO: Should get all the wands
     return await this.wandsLister.execute();
   }
 }
