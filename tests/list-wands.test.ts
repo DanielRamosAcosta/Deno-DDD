@@ -1,10 +1,10 @@
 import { expect } from "expect";
-import { app } from "../src/api/app.ts";
+import { appTest } from "./app-test.ts";
 import { testMy, w } from "./ultratest.ts";
 
 Deno.test({
   name: "returns the details of the wand",
-  fn: w(app, async (app) => {
+  fn: w(appTest.build(), async (app) => {
     const { body, status } = await testMy(app).get("/wands/1").json();
 
     expect(body).toEqual({ length: 25 });
@@ -14,7 +14,7 @@ Deno.test({
 
 Deno.test({
   name: "returns the list of wands",
-  fn: w(app, async (app) => {
+  fn: w(appTest.build(), async (app) => {
     const { body, status } = await testMy(app).get("/wands").json();
 
     expect(body).toEqual([]);
@@ -24,7 +24,7 @@ Deno.test({
 
 Deno.test({
   name: "creates a customer",
-  fn: w(app, async (app) => {
+  fn: w(appTest.build(), async (app) => {
     const { body, status } = await testMy(app)
       .post("/customers", { name: "Peter" })
       .expect("Content-Type", /json/)
