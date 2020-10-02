@@ -1,6 +1,6 @@
 {
   "imports": {
-    "expect/": "https://raw.githubusercontent.com/allain/expect/v0.2.1/",
+    "expect": "https://deno.land/x/expect@v0.2.5/mod.ts",
     "alosaur": "https://raw.githubusercontent.com/alosaur/alosaur/master/mod.ts"
   }
 }

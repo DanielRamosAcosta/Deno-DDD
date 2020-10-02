@@ -9,4 +9,7 @@
     }
   },
   "editor.tabSize": 2,
+  "deno.import_intellisense_origins": {
+    "https://deno.land": true
+  },
 }

@@ -10,19 +10,8 @@ container.register(CUSTOMER_REPOSITORY_TOKEN, {
   useClass: CustomerRepositoryMongo,
 });
 
-const app = new App({
+export const app = new App({
   areas: [CustomerArea, WandArea],
   logging: false,
   container,
 });
-
-app.listen({
-  hostname: "0.0.0.0",
-  port: 8000,
-});
-
-fetch("http://localhost:8000/customers", { method: "POST" })
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-  });
