@@ -26,9 +26,7 @@ Deno.test({
   name: "creates a customer",
   fn: w(app, async (app) => {
     const { body, status } = await testMy(app)
-      .post("/customers", {
-        name: "Dani",
-      })
+      .post("/customers", { name: "Peter" })
       .expect("Content-Type", /json/)
       .expect(200)
       .json();
